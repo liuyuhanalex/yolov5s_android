@@ -10,7 +10,7 @@ For more information, please refer this article by the developer of `openvino2te
 git clone --recursive https://github.com/lp6m/yolov5s_android
 cd yolov5s_android
 docker build ./ -f ./docker/Dockerfile  -t yolov5s_android
-docker run -it --gpus all -v `pwd`:/workspace yolov5s_anrdoid bash
+docker run -it --gpus all -v `pwd`:/workspace yolov5s_android bash
 ```
 The following process is performed in docker container.  
 
@@ -37,7 +37,10 @@ The output layers are three most bottom Convolution layers.
 ```sh
 netron yolov5s.onnx
 ```
-<img src="https://github.com/lp6m/yolov5s_android/raw/media/onnx_output_layers.png" width=50%> 
+<img src="https://github.com/lp6m/yolov5s_
+          
+          
+          /raw/media/onnx_output_layers.png" width=50%> 
   
 In this model, the output layer IDs are `Conv_245,Conv_325,Conv_405`.  
 **We convert the ONNX model without detect head layers.**
